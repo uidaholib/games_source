@@ -13,18 +13,19 @@ layout: page
   </div>
   <div class="col-md-4">  
 
-    {% include index/time.html %}
+    {% include index/featured-terms.html field="theme" title="Themes" btn-color="primary" max=10 %}
 
-    {% include index/featured-terms.html field="subject" title="Top Subjects" btn-color="primary" %}
-
-    {% include index/featured-terms.html field="location" title="Locations" btn-color="outline-secondary" %}
+    {% include index/featured-terms.html field="mechanics" title="Mechanics" btn-color="outline-secondary" max=10 %}
     
-    {% include index/objects.html %}
-
-  </div>
-  <div class="col-md-12">
-
-    {% include index/data-download.html %}
+    <div class="card mb-3" >
+      <div class="card-body">
+        <h5 class="card-title">Collection</h5>
+        <p class="card-text">
+          {{ items | size }} Games<br>
+          <a class="btn btn-sm btn-outline-secondary mt-2" href="{{ '/data.html' | relative_url }}">View table</a>
+        </p>
+      </div>
+    </div>
 
   </div>
 
