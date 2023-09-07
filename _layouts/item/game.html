@@ -1,0 +1,99 @@
+---
+# custom layout for games
+layout: default
+# item-meta adds rich meta markup to the page on production build
+item-meta: true
+---
+<div class="container py-3">
+
+    {% include item/breadcrumbs.html %}
+    
+    <h2 class="mb-3">{{ page.title }}</h2>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            
+            {% if page.image_thumb or page.image_small %}
+            <p><img class="img-thumbnail" src="{{ page.image_small | default: page.image_thumb | relative_url }}" alt="{{ page.image_alt_text | default: page.title | escape }}"></p>
+            {% endif %}
+            <p>{{ page.description }}</p>
+            <p>
+                <ul> 
+                    <li>Players: {{ page.players_min }} - {{ page.players_max }} {% if page.players_recommended %}(recommended: {{ page.players_recommended }}){% endif %}</li>
+                    <li>Recommended Age: {{ page.recommended_age }}</li>
+                    <li>Playing Time: {{ page.playing_time }}</li>
+                </ul>
+            </p>
+
+        </div>
+        <div class="col-md-6">
+            
+            {% include item/metadata.html %}
+
+        </div>
+        <div class="col-12">
+            <div class="card my-3">
+                <div class="card-body">
+
+                    {% if page.awards %}<p>Awards: {{ page.awards }}</p>{% endif %}
+                    <p>Resources: 
+                        {% if page.game_link %}<a href="{{ page.game_link }}" class="btn btn-outline-primary m-2">More Game Information</a>{% endif %}
+                        {% if page.catalog_link %}<a href="{{ page.catalog_link }}" class="btn btn-outline-primary m-2">Catalog Listing</a>{% endif %}
+                        {% if page.rules_link %}<a href="{{ page.rules_link }}" class="btn btn-outline-primary m-2">Rules</a>{% endif %}
+                        {% if page.supplement_link %}<a href="{{ page.supplement_link }}" class="btn btn-outline-primary m-2">Supplement</a>{% endif %}
+                    </p>
+
+                    {% if page.video_link or page.video_extra %}
+
+                    <div class="row justify-content-center my-3"> 
+
+                        {% if page.video_link %}
+                        <div class="col-md-6 p-3">
+                            {% if page.video_link contains 'vimeo' %}
+                            {% assign vimeo_id = page.video_link | split: '/' | last %}
+                            <div class="ratio ratio-16x9">
+                                <iframe title="video embed {{ page.title | escape }}" src="https://player.vimeo.com/video/{{ vimeo_id }}" allowfullscreen></iframe>
+                            </div>
+                            {%- elsif page.video_link contains 'youtu' -%}
+                            {% assign youtube_id = page.video_link | split: '/' | last %}
+                            {% if youtube_id contains 'v=' %}{% assign youtube_id = youtube_id | split: 'v=' | last | split: '&' | first %}
+                            {% elsif youtube_id contains '?' %}{% assign youtube_id = youtube_id | split: '?' | first %}{% endif %}
+                            <div class="ratio ratio-16x9">
+                                <iframe title="video embed {{ page.title | escape }}" src="https://www.youtube-nocookie.com/embed/{{ youtube_id }}?rel=0&modestbranding=1" allowfullscreen></iframe>
+                            </div>
+                            {% endif %}
+                        </div>
+                        {% endif %}
+
+                        {% if page.video_extra %}
+                        <div class="col-md-6 p-3">
+                            {% if page.video_extra contains 'vimeo' %}
+                            {% assign vimeo_id = page.video_extra | split: '/' | last %}
+                            <div class="ratio ratio-16x9">
+                                <iframe title="video embed {{ page.title | escape }}" src="https://player.vimeo.com/video/{{ vimeo_id }}" allowfullscreen></iframe>
+                            </div>
+                            {%- elsif page.video_extra contains 'youtu' -%}
+                            {% assign youtube_id = page.video_extra | split: '/' | last %}
+                            {% if youtube_id contains 'v=' %}{% assign youtube_id = youtube_id | split: 'v=' | last | split: '&' | first %}
+                            {% elsif youtube_id contains '?' %}{% assign youtube_id = youtube_id | split: '?' | first %}{% endif %}
+                            <div class="ratio ratio-16x9">
+                                <iframe title="video embed {{ page.title | escape }}" src="https://www.youtube-nocookie.com/embed/{{ youtube_id }}?rel=0&modestbranding=1" allowfullscreen></iframe>
+                            </div>
+                            {% endif %}
+                        </div>
+                        {% endif %}
+                    </div>
+            
+                    {% endif %}
+                </div>
+            </div>
+        
+        </div>
+
+
+    </div>
+
+    {%- if site.data.theme.browse-buttons == true -%}
+        {% include item/browse-buttons.html %}
+    {%- endif -%}
+</div>
