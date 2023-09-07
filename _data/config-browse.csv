@@ -1,6 +1,6 @@
 field,display_name,btn,hidden,sort_name
-date,Date,,,Date
-creator,Creator,,,
-subject,,true
-location,,true
-identifier,,,true,Identifier
+designer,Designer,
+publisher,Publisher,
+theme,,true,
+mechanics,,true,
+Awards_without_year,,,true,
