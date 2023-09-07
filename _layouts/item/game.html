@@ -11,32 +11,38 @@ item-meta: true
     <h2 class="mb-3">{{ page.title }}</h2>
 
     <div class="row justify-content-center">
-        <div class="col-md-6">
+        <div class="col-md-6 p-3">
             
             {% if page.image_thumb or page.image_small %}
             <p><img class="img-thumbnail" src="{{ page.image_small | default: page.image_thumb | relative_url }}" alt="{{ page.image_alt_text | default: page.title | escape }}"></p>
             {% endif %}
             <p>{{ page.description }}</p>
-            <p>
-                <ul> 
-                    <li>Players: {{ page.players_min }} - {{ page.players_max }} {% if page.players_recommended %}(recommended: {{ page.players_recommended }}){% endif %}</li>
-                    <li>Recommended Age: {{ page.recommended_age }}</li>
-                    <li>Playing Time: {{ page.playing_time }}</li>
-                </ul>
-            </p>
-
+            
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 p-3">
             
             {% include item/metadata.html %}
+
+            <dl>
+                <dt class="field">Players:</dt>
+                <dd class="field-value">{{ page.players_min }} - {{ page.players_max }} {% if page.players_recommended %}(recommended: {{ page.players_recommended }}){% endif %}</dd>
+                
+                <dt class="field">Recommended Age:</dt>
+                <dd class="field-value">{{ page.recommended_age }}</dd>
+
+                <dt class="field">Playing Time:</dt>
+                <dd class="field-value">{{ page.playing_time }}</dd>
+            </dl>
 
         </div>
         <div class="col-12">
             <div class="card my-3">
                 <div class="card-body">
 
-                    {% if page.awards %}<p>Awards: {{ page.awards }}</p>{% endif %}
-                    <p>Resources: 
+                    {% if page.awards %}<h3 class="card-title">Awards</h3>
+                    <p class="card-text">{{ page.awards }}</p>{% endif %}
+                    <h3 class="card-title">Resources</h3>
+                    <p class="card-text">
                         {% if page.game_link %}<a href="{{ page.game_link }}" class="btn btn-outline-primary m-2">More Game Information</a>{% endif %}
                         {% if page.catalog_link %}<a href="{{ page.catalog_link }}" class="btn btn-outline-primary m-2">Catalog Listing</a>{% endif %}
                         {% if page.rules_link %}<a href="{{ page.rules_link }}" class="btn btn-outline-primary m-2">Rules</a>{% endif %}
