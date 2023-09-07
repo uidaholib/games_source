@@ -8,26 +8,30 @@ credits: true
 # Look in _includes/feature for options to easily add features to the page
 ---
 
-{% include feature/jumbotron.html objectid="https://cdil.lib.uidaho.edu/images/palouse_sm.jpg" %} 
+## About the Board Game Collection
 
-{% include feature/nav-menu.html sections="About CollectionBuilder CSV;About the About Page" %}
+This collection was the brainchild of library employees who sought to create a collection of board games for the benefit of the University of Idaho community. Board gaming in general has experienced a rise in popularity in recent decades and they provide an activity that promotes critical thinking and provides support for mental health through stress relief and collaboration. In this collection you will find games that span the range of classic game that you might have played during your childhood to modern board games that are more strategy based.
 
-## About CollectionBuilder CSV
+Our collection collection contains more than just those games that you grew up with. It is very likely that those games that you don't recognize are games that are considered to be Designer Games, EuroGames, or German Games. These games tend to be strategy based and have relatively simple rules and are easy to learn in one sitting. Many of these games have the ability to appeal to those new to board games in addition to experienced players. Random elements in the games give them excellent replay value.
 
-This demo collection features items from the University of Idaho Library's [Digital Collections](https://www.lib.uidaho.edu/digital/), and is build using [CollectionBuilder-CSV](https://github.com/CollectionBuilder/collectionbuilder-csv).
+## Can't Find The Game You Want to Play?
 
-CollectionBuilder-CSV is a "Stand Alone" template for creating digital collection and exhibit websites using Jekyll, given:
+Submit a game suggestion by clicking the button below and we will consider purchasing the game to add to our collection. Please include the title game, the publisher, and a link (if you have one) in you submission.
 
-- a CSV of collection metadata
-- a folder of images, PDFs, audio, or video files
+## Puzzles
 
-Driven by your collection metadata, the template generates engaging visualizations to browse and explore your objects.
-The resulting static site can be hosted on any basic web server.
+We also have Puzzles! 
+Check out our [catalog listings](https://alliance-uidaho.primo.exlibrisgroup.com/discovery/search?query=title,exact,puzzle&tab=Everything&search_scope=DN_and_CI&vid=01ALLIANCE_UID:UID&offset=0&facet=rtype,include,realia,lk&facet=tlevel,include,available_p,lk).
 
-[CollectionBuilder](https://github.com/CollectionBuilder/) is an set of open source tools for creating digital collection and exhibit websites that are driven by metadata and powered by modern static web technology.
-See [CB Docs](https://collectionbuilder.github.io/cb-docs/) for detailed information.
+## Bring our Board Games to your events! 
 
-{% include feature/image.html objectid="demo_001" width="75" %} 
+Hosting an event? Want to have some thing to do? Build team work? Collaborate? Just have some fun?
 
-<!-- IMPORTANT!!! DELETE this comment and the include below when you are finished editing this page for your collection. The include below introduces about page features. They will show up on your collection's about page until you delete it.  -->
-{% include cb/about_the_about.md %} 
+Contact Perri Moreno, pmoreno@uidaho.edu, to see about bringing the library's board games to your event!
+
+## Acknowledgements
+
+This collection was made possible with the generous assistance of the [Associated Students University of Idaho](https://www.uidaho.edu/current-students/student-involvement/asui) who provided some of the initial funds to establish the collection. We would also like to thank the VandalStore for donating Vandalopoly.
+
+We would like to thank the Florida State College at Jacksonville for allowing us to model our Board Game guide off of their [original guide](https://guides.fscj.edu/games).
+
