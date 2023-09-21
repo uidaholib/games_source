@@ -39,15 +39,15 @@ item-meta: true
             <div class="card my-3">
                 <div class="card-body">
 
-                    {% if page.awards %}<h3 class="card-title">Awards</h3>
-                    <p class="card-text">{{ page.awards }}</p>{% endif %}
                     <h3 class="card-title">Resources</h3>
                     <p class="card-text">
+                        {% if page.catalog_link %}<a href="{{ page.catalog_link }}" class="btn btn-outline-primary m-2">Catalog Listing (Availability)</a>{% endif %}
                         {% if page.game_link %}<a href="{{ page.game_link }}" class="btn btn-outline-primary m-2">More Game Information</a>{% endif %}
-                        {% if page.catalog_link %}<a href="{{ page.catalog_link }}" class="btn btn-outline-primary m-2">Catalog Listing</a>{% endif %}
                         {% if page.rules_link %}<a href="{{ page.rules_link }}" class="btn btn-outline-primary m-2">Rules</a>{% endif %}
                         {% if page.supplement_link %}<a href="{{ page.supplement_link }}" class="btn btn-outline-primary m-2">Supplement</a>{% endif %}
                     </p>
+                    {% if page.awards %}<h3 class="card-title">Awards</h3>
+                    <p class="card-text">{{ page.awards }}</p>{% endif %}
 
                     {% if page.video_link or page.video_extra %}
 
