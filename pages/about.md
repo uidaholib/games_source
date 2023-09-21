@@ -1,12 +1,14 @@
 ---
 title: About
-layout: about
+layout: page-narrow
 permalink: /about.html
 # include CollectionBuilder info at bottom
 #credits: true
 # Edit the markdown on in this file to describe your collection
 # Look in _includes/feature for options to easily add features to the page
 ---
+
+{% include feature/jumbotron.html objectid="https://www.lib.uidaho.edu/media/carousel/board-game.jpg" %}
 
 ## About the Board Game Collection
 
@@ -22,7 +24,7 @@ Submit a game suggestion by clicking the button below and we will consider purch
 
 Hosting an event? Want to have some thing to do? Build team work? Collaborate? Just have some fun?
 
-Contact Perri Moreno, pmoreno@uidaho.edu, to see about bringing the library's board games to your event!
+Contact [Tyler Rodrigues](https://www.lib.uidaho.edu/about/people/trodrigues.html) <trodrigues@uidaho.edu> to see about bringing the library's board games to your event!
 
 ## Acknowledgements
 
