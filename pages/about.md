@@ -3,7 +3,7 @@ title: About
 layout: about
 permalink: /about.html
 # include CollectionBuilder info at bottom
-credits: true
+#credits: true
 # Edit the markdown on in this file to describe your collection
 # Look in _includes/feature for options to easily add features to the page
 ---
@@ -17,11 +17,6 @@ Our collection collection contains more than just those games that you grew up w
 ## Can't Find The Game You Want to Play?
 
 Submit a game suggestion by clicking the button below and we will consider purchasing the game to add to our collection. Please include the title game, the publisher, and a link (if you have one) in you submission.
-
-## Puzzles
-
-We also have Puzzles! 
-Check out our [catalog listings](https://alliance-uidaho.primo.exlibrisgroup.com/discovery/search?query=title,exact,puzzle&tab=Everything&search_scope=DN_and_CI&vid=01ALLIANCE_UID:UID&offset=0&facet=rtype,include,realia,lk&facet=tlevel,include,available_p,lk).
 
 ## Bring our Board Games to your events! 
 
