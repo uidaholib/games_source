@@ -40,13 +40,25 @@ item-meta: true
         </div>
         <div class="col-md-5 p-3">
 
-            <h2 class="mb-3">{{ page.title }}</h2>
+            <h2 class="mb-3 h1">{{ page.title }}</h2>
 
             <p class="card-text">
                 {% if page.catalog_link %}<a href="{{ page.catalog_link }}" class="btn btn-outline-pride-gold m-2">Catalog Listing (Availability)</a>{% endif %}
             </p>
 
             <p>{{ page.description }}</p>
+            <p><strong>Theme:</strong> 
+                {% assign topics = page.theme | split: ";" %}
+                {% for t in topics %}
+                <a class="mx-3" href="{{ t | strip | url_param_escape | prepend: '/browse.html#' | relative_url }}">{{ t | strip }}</a>
+                {% endfor %}
+            </p>
+            <p><strong>Mechanics:</strong> 
+                {% assign topics = page.mechanics | split: ";" %}
+                {% for t in topics %}
+                <a class="mx-2" href="{{ t | strip | url_param_escape | prepend: '/browse.html#' | relative_url }}">{{ t | strip }}</a>
+                {% endfor %}
+            </p>
 
         </div>
         <div class="col-12">

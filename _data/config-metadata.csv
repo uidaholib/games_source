@@ -3,6 +3,4 @@ title,Title,,,DCTERMS.title,headline
 designer,Designer,,,DCTERMS.creator,creator
 publisher,Publisher,,,DCTERMS.publisher,
 year,Year,,,DCTERMS.date,dateCreated
-theme,Theme,true,,,
-mechanics,Mechanics,true,,,
 awards,Awards,,,,
