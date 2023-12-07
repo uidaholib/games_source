@@ -1,5 +1,5 @@
 ---
-title: Themes and Mechanics
+title: Game Themes
 layout: page
 permalink: /themes.html
 # Default subject page is configured in "_data/theme.yml"
@@ -14,3 +14,7 @@ cloud-fields: site.data.theme.subjects-fields
 ## Browse Game Mechanics
 
 {% include feature/cloud.html fields="mechanics" min=2 %}
+
+## Browse Game Awards
+
+{% include feature/cloud.html fields="Awards_without_year" min=2 %}
