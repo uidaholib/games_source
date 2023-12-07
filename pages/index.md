@@ -22,5 +22,4 @@ Before returning, double check:
 - Dice
 - Cards
 
-Contact [Tyler Rodrigues](https://www.lib.uidaho.edu/about/people/trodrigues.html) <trodrigues@uidaho.edu> if you have any questions!
-
+Please contact [Tyler Rodrigues](https://www.lib.uidaho.edu/about/people/trodrigues.html) if you have any questions!
