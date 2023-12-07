@@ -9,11 +9,11 @@ cloud-fields: site.data.theme.subjects-fields
 
 ## Browse Game Themes
 
-{% include feature/cloud.html fields="theme" min=2 %}
+{% include feature/cloud.html fields="theme" min=2 button="payette-blue" %}
 
 ## Browse Game Mechanics
 
-{% include feature/cloud.html fields="mechanics" min=2 %}
+{% include feature/cloud.html fields="mechanics" min=2 button="outline-payette-blue" %}
 
 ## Browse Game Awards
 

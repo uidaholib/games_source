@@ -24,7 +24,7 @@ Submit a game suggestion by clicking the button below and we will consider purch
 
 Hosting an event? Want to have some thing to do? Build team work? Collaborate? Just have some fun?
 
-Contact [Tyler Rodrigues](https://www.lib.uidaho.edu/about/people/trodrigues.html) <trodrigues@uidaho.edu> to see about bringing the library's board games to your event!
+Contact [Tyler Rodrigues](https://www.lib.uidaho.edu/about/people/trodrigues.html) to see about bringing the library's board games to your event!
 
 ## Acknowledgements
 
