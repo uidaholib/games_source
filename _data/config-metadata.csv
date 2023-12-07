@@ -1,7 +1,7 @@
 field,display_name,browse_link,external_link,dc_map,schema_map
 title,Title,,,DCTERMS.title,headline
 designer,Designer,,,DCTERMS.creator,creator
-publisher,Publisher,,,,
+publisher,Publisher,,,DCTERMS.publisher,
 year,Year,,,DCTERMS.date,dateCreated
 theme,Theme,true,,,
 mechanics,Mechanics,true,,,
