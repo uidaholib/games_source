@@ -1,5 +1,9 @@
 field,index,display
 title,true,true
+description,true,false
+mechanics,true,false
+theme,true,false
+awards,true,false
 year,true,true
 designer,true,false
 publisher,true,true
