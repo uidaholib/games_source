@@ -14,11 +14,13 @@ permalink: /about.html
 
 This collection was the brainchild of library employees who sought to create a collection of board games for the benefit of the University of Idaho community. Board gaming in general has experienced a rise in popularity in recent decades and they provide an activity that promotes critical thinking and provides support for mental health through stress relief and collaboration. In this collection you will find games that span the range of classic game that you might have played during your childhood to modern board games that are more strategy based.
 
-Our collection collection contains more than just those games that you grew up with. It is very likely that those games that you don't recognize are games that are considered to be Designer Games, EuroGames, or German Games. These games tend to be strategy based and have relatively simple rules and are easy to learn in one sitting. Many of these games have the ability to appeal to those new to board games in addition to experienced players. Random elements in the games give them excellent replay value.
+Our collection contains more than just those games that you grew up with. It is very likely that those games that you don't recognize are games that are considered to be Designer Games, EuroGames, or German Games. These games tend to be strategy based and have relatively simple rules and are easy to learn in one sitting. Many of these games have the ability to appeal to those new to board games in addition to experienced players. Random elements in the games give them excellent replay value.
 
 ## Can't Find The Game You Want to Play?
 
 Submit a game suggestion by clicking the button below and we will consider purchasing the game to add to our collection. Please include the title game, the publisher, and a link (if you have one) in you submission.
+
+[Game Suggestion Form](){:.btn .btn-lg .btn-success} *Coming soon!*
 
 ## Bring our Board Games to your events! 
 
