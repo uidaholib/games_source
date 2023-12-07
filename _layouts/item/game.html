@@ -7,6 +7,47 @@ item-meta: true
 <div class="container py-3">
 
     {% include item/breadcrumbs.html %}
+
+    <h2 class="mb-3 h1">{{ page.title }}</h2>
+
+    <div class="card-group my-3 text-center border-primary">
+        <div class="card border-primary">
+            <div class="card-body">
+                <h3 class="card-title h5 fw-bold">Players</h3>
+                <p class="card-text">{{ page.players_min }} - {{ page.players_max }} {% if page.players_recommended %}<br>(recommended: {{ page.players_recommended }}){% endif %}</p>
+            </div>
+        </div>
+        <div class="card border-primary">
+            <div class="card-body">
+                <h3 class="card-title h5 fw-bold">Recommended Age</h3>
+                <p class="card-text">{{ page.recommended_age }}</p>
+            </div>
+        </div>
+        <div class="card border-primary">
+            <div class="card-body">
+                <h3 class="card-title h5 fw-bold">Playing Time</h3>
+                <p class="card-text">{{ page.playing_time }}</p>
+            </div>
+        </div>
+        <div class="card border-primary">
+            <div class="card-body">
+                <h3 class="card-title h5 fw-bold">Theme</h3>
+                <p class="card-text">{% assign topics = page.theme | split: ";" %}
+                    {% for t in topics %}
+                    <a class="mx-1" href="{{ t | strip | url_param_escape | prepend: '/browse.html#' | relative_url }}">{{ t | strip }}</a><br>
+                    {% endfor %}</p>
+            </div>
+        </div>
+        <div class="card border-primary">
+            <div class="card-body">
+                <h3 class="card-title h5 fw-bold">Mechanics</h3>
+                <p class="card-text">{% assign topics = page.mechanics | split: ";" %}
+                    {% for t in topics %}
+                    <a class="mx-1" href="{{ t | strip | url_param_escape | prepend: '/browse.html#' | relative_url }}">{{ t | strip }}</a><br>
+                    {% endfor %}</p>
+            </div>
+        </div>
+    </div>
     
     
 
@@ -16,49 +57,15 @@ item-meta: true
             {% if page.image_thumb or page.image_small %}
             <p><img class="img-thumbnail" src="{{ page.image_small | default: page.image_thumb | relative_url }}" alt="{{ page.image_alt_text | default: page.title | escape }}"></p>
             {% endif %}
-            <div class="card-group my-3 text-center border-primary">
-                <div class="card border-primary">
-                    <div class="card-body">
-                        <h3 class="card-title h5 fw-bold">Players</h3>
-                        <p class="card-text">{{ page.players_min }} - {{ page.players_max }} {% if page.players_recommended %}<br>(recommended: {{ page.players_recommended }}){% endif %}</p>
-                    </div>
-                </div>
-                <div class="card border-primary">
-                    <div class="card-body">
-                        <h3 class="card-title h5 fw-bold">Recommended Age</h3>
-                        <p class="card-text">{{ page.recommended_age }}</p>
-                    </div>
-                </div>
-                <div class="card border-primary">
-                    <div class="card-body">
-                        <h3 class="card-title h5 fw-bold">Playing Time</h3>
-                        <p class="card-text">{{ page.playing_time }}</p>
-                    </div>
-                </div>
-            </div>
             
         </div>
         <div class="col-md-5 p-3">
 
-            <h2 class="mb-3 h1">{{ page.title }}</h2>
-
-            <p class="card-text">
+            <p>
                 {% if page.catalog_link %}<a href="{{ page.catalog_link }}" class="btn btn-outline-pride-gold m-2">Catalog Listing (Availability)</a>{% endif %}
             </p>
 
             <p>{{ page.description }}</p>
-            <p><strong>Theme:</strong> 
-                {% assign topics = page.theme | split: ";" %}
-                {% for t in topics %}
-                <a class="mx-3" href="{{ t | strip | url_param_escape | prepend: '/browse.html#' | relative_url }}">{{ t | strip }}</a>
-                {% endfor %}
-            </p>
-            <p><strong>Mechanics:</strong> 
-                {% assign topics = page.mechanics | split: ";" %}
-                {% for t in topics %}
-                <a class="mx-2" href="{{ t | strip | url_param_escape | prepend: '/browse.html#' | relative_url }}">{{ t | strip }}</a>
-                {% endfor %}
-            </p>
 
         </div>
         <div class="col-12">
