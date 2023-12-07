@@ -8,89 +8,98 @@ item-meta: true
 
     {% include item/breadcrumbs.html %}
     
-    <h2 class="mb-3">{{ page.title }}</h2>
+    
 
     <div class="row justify-content-center">
-        <div class="col-md-6 p-3">
+        <div class="col-md-7 p-3">
             
             {% if page.image_thumb or page.image_small %}
             <p><img class="img-thumbnail" src="{{ page.image_small | default: page.image_thumb | relative_url }}" alt="{{ page.image_alt_text | default: page.title | escape }}"></p>
             {% endif %}
-            <p>{{ page.description }}</p>
+            <div class="card-group my-3 text-center border-primary">
+                <div class="card border-primary">
+                    <div class="card-body">
+                        <h3 class="card-title h5 fw-bold">Players</h3>
+                        <p class="card-text">{{ page.players_min }} - {{ page.players_max }} {% if page.players_recommended %}<br>(recommended: {{ page.players_recommended }}){% endif %}</p>
+                    </div>
+                </div>
+                <div class="card border-primary">
+                    <div class="card-body">
+                        <h3 class="card-title h5 fw-bold">Recommended Age</h3>
+                        <p class="card-text">{{ page.recommended_age }}</p>
+                    </div>
+                </div>
+                <div class="card border-primary">
+                    <div class="card-body">
+                        <h3 class="card-title h5 fw-bold">Playing Time</h3>
+                        <p class="card-text">{{ page.playing_time }}</p>
+                    </div>
+                </div>
+            </div>
             
         </div>
-        <div class="col-md-6 p-3">
-            
-            {% include item/metadata.html %}
+        <div class="col-md-5 p-3">
 
-            <dl>
-                <dt class="field">Players:</dt>
-                <dd class="field-value">{{ page.players_min }} - {{ page.players_max }} {% if page.players_recommended %}(recommended: {{ page.players_recommended }}){% endif %}</dd>
-                
-                <dt class="field">Recommended Age:</dt>
-                <dd class="field-value">{{ page.recommended_age }}</dd>
+            <h2 class="mb-3">{{ page.title }}</h2>
 
-                <dt class="field">Playing Time:</dt>
-                <dd class="field-value">{{ page.playing_time }}</dd>
-            </dl>
+            <p class="card-text">
+                {% if page.catalog_link %}<a href="{{ page.catalog_link }}" class="btn btn-outline-pride-gold m-2">Catalog Listing (Availability)</a>{% endif %}
+            </p>
+
+            <p>{{ page.description }}</p>
 
         </div>
         <div class="col-12">
             <div class="card my-3">
                 <div class="card-body">
 
-                    <h3 class="card-title">Resources</h3>
-                    <p class="card-text">
-                        {% if page.catalog_link %}<a href="{{ page.catalog_link }}" class="btn btn-outline-primary m-2">Catalog Listing (Availability)</a>{% endif %}
-                        {% if page.game_link %}<a href="{{ page.game_link }}" class="btn btn-outline-primary m-2">More Game Information</a>{% endif %}
-                        {% if page.rules_link %}<a href="{{ page.rules_link }}" class="btn btn-outline-primary m-2">Rules</a>{% endif %}
-                        {% if page.supplement_link %}<a href="{{ page.supplement_link }}" class="btn btn-outline-primary m-2">Supplement</a>{% endif %}
-                    </p>
-                    {% if page.awards %}<h3 class="card-title">Awards</h3>
-                    <p class="card-text">{{ page.awards }}</p>{% endif %}
+                    <h3 class="card-title">Game Details</h3>
 
-                    {% if page.video_link or page.video_extra %}
-
-                    <div class="row justify-content-center my-3"> 
-
-                        {% if page.video_link %}
-                        <div class="col-md-6 p-3">
+                    <div class="row">
+                        <div class="col-md-6">
+                            {% include item/metadata.html %}
+                        </div>
+                        <div class="col-md-6">
+                            {% if page.game_link %}<a href="{{ page.game_link }}" class="btn btn-outline-primary m-2">More Game Information</a>{% endif %}
+                            {% if page.rules_link %}<a href="{{ page.rules_link }}" class="btn btn-outline-primary m-2">Rules</a>{% endif %}
+                            {% if page.supplement_link %}<a href="{{ page.supplement_link }}" class="btn btn-outline-primary m-2">Supplement</a>{% endif %}
+                            
+                            {% if page.video_link %}
                             {% if page.video_link contains 'vimeo' %}
                             {% assign vimeo_id = page.video_link | split: '/' | last %}
-                            <div class="ratio ratio-16x9">
+                            <div class="ratio ratio-16x9 my-4">
                                 <iframe title="video embed {{ page.title | escape }}" src="https://player.vimeo.com/video/{{ vimeo_id }}" allowfullscreen></iframe>
                             </div>
                             {%- elsif page.video_link contains 'youtu' -%}
                             {% assign youtube_id = page.video_link | split: '/' | last %}
                             {% if youtube_id contains 'v=' %}{% assign youtube_id = youtube_id | split: 'v=' | last | split: '&' | first %}
                             {% elsif youtube_id contains '?' %}{% assign youtube_id = youtube_id | split: '?' | first %}{% endif %}
-                            <div class="ratio ratio-16x9">
+                            <div class="ratio ratio-16x9 my-4">
                                 <iframe title="video embed {{ page.title | escape }}" src="https://www.youtube-nocookie.com/embed/{{ youtube_id }}?rel=0&modestbranding=1" allowfullscreen></iframe>
                             </div>
                             {% endif %}
-                        </div>
-                        {% endif %}
+                            {% endif %}
 
-                        {% if page.video_extra %}
-                        <div class="col-md-6 p-3">
+                            {% if page.video_extra %}
+                            
                             {% if page.video_extra contains 'vimeo' %}
                             {% assign vimeo_id = page.video_extra | split: '/' | last %}
-                            <div class="ratio ratio-16x9">
+                            <div class="ratio ratio-16x9 my-4">
                                 <iframe title="video embed {{ page.title | escape }}" src="https://player.vimeo.com/video/{{ vimeo_id }}" allowfullscreen></iframe>
                             </div>
                             {%- elsif page.video_extra contains 'youtu' -%}
                             {% assign youtube_id = page.video_extra | split: '/' | last %}
                             {% if youtube_id contains 'v=' %}{% assign youtube_id = youtube_id | split: 'v=' | last | split: '&' | first %}
                             {% elsif youtube_id contains '?' %}{% assign youtube_id = youtube_id | split: '?' | first %}{% endif %}
-                            <div class="ratio ratio-16x9">
+                            <div class="ratio ratio-16x9 my-4">
                                 <iframe title="video embed {{ page.title | escape }}" src="https://www.youtube-nocookie.com/embed/{{ youtube_id }}?rel=0&modestbranding=1" allowfullscreen></iframe>
                             </div>
                             {% endif %}
+                            {% endif %}
+
                         </div>
-                        {% endif %}
                     </div>
             
-                    {% endif %}
                 </div>
             </div>
         
