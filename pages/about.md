@@ -20,7 +20,7 @@ Our collection contains more than just those games that you grew up with. It is 
 
 Submit a game suggestion by clicking the button below and we will consider purchasing the game to add to our collection. Please include the title game, the publisher, and a link (if you have one) in you submission.
 
-[Game Suggestion Form](){:.btn .btn-lg .btn-success} *Coming soon!*
+[Game Suggestion Form](https://forms.office.com/r/FxFMVdA8Lj){:.btn .btn-lg .btn-success}
 
 ## Bring our Board Games to your events! 
 
