@@ -70,6 +70,9 @@ item-meta: true
                     <div class="row">
                         <div class="col-md-6">
                             {% include item/metadata.html %}
+
+                            {% include item/contact-btn.html %}
+                            
                         </div>
                         <div class="col-md-6">
                             {% if page.game_link %}<a href="{{ page.game_link }}" class="btn btn-outline-primary m-2">More Game Information</a>{% endif %}
