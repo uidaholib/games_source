@@ -1,11 +1,12 @@
 ---
 title: Game Themes
 layout: page
-permalink: /themes.html
-# Default subject page is configured in "_data/theme.yml"
-# leave cloud-fields as "site.data.theme.subjects-fields"
-cloud-fields: site.data.theme.subjects-fields
+permalink: /categories.html
 ---
+
+## Game Categories 
+
+Use the word clouds below to browse games by their [Themes](#browse-game-themes), [Mechanics](#browse-game-mechanics), and [Awards](#browse-game-awards).
 
 ## Browse Game Themes
 
