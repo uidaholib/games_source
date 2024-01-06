@@ -46,9 +46,9 @@ year-nav-increment: 5 # set increments to auto gen nav years
 # 
 # add metadata fields for export in data downloads (tip: paste in first row of csv)
 # comma delimited list, reference url is automatic
-metadata-export-fields: "title,creator,date,description,subject,location,latitude,longitude,source,identifier,type,format,language,rights,rightsstatement"
+metadata-export-fields: "objectid,title,designer,artist,publisher,year,description,game_link,catalog_link,catalog_description,call_number,video_link,video_extra,rules_link,supplement_link,game_printables_link,players_min,players_max,players_recommended,recommended_age,playing_time,Playing time Less that 30 min,Playing time from 30 min up to an hour,Playing time From 1 hour up to 2 hours,Playing time 2 hours or more,theme,mechanics,awards,Awards_without_year,award_winner,original_link,old_table_img,game_image_link,file_name_old,image_filename,image_small,image_thumb,display_template"
 # generate a facets list for given fields, comma delimited
-metadata-facets-fields: "subject,creator,format"
+metadata-facets-fields: "designer,artist,publisher,theme,mechanics"
 
 ##########
 # Compound Objects 

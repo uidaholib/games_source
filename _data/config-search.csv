@@ -6,4 +6,5 @@ theme,true,false
 awards,true,false
 year,true,true
 designer,true,false
+artist,true,false
 publisher,true,true
