@@ -6,7 +6,7 @@
 
 A CollectionBuilder-based project to build a website featuring the game collection of University of Idaho Library, allowing users to browse and discover games to check out.
 
-The University of Idaho Board Game Collection site is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/).
+The University of Idaho Board Game Collection site is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International Deed (CC BY-SA 4.0 Deed)](http://creativecommons.org/licenses/by-sa/4.0/).
 
 ----------
 
