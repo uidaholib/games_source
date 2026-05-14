@@ -49,14 +49,13 @@ item-meta: true
             <p><strong>Theme:</strong> 
                 {% assign topics = page.theme | split: ";" %}
                 {% for t in topics %}
-                <a class="mx-3" href="{{ t | strip | url_param_escape | prepend: '/browse.html#' | relative_url }}">{{ t | strip }}</a>
+                <a class="mx-3" href="{{ t | strip | url_param_escape | prepend: '/browse.html#theme:' | relative_url }}">{{ t | strip }}</a>
                 {% endfor %}
             </p>
-
             <p><strong>Mechanics:</strong> 
                 {% assign topics = page.mechanics | split: ";" %}
                 {% for t in topics %}
-                <a class="mx-2" href="{{ t | strip | url_param_escape | prepend: '/browse.html#' | relative_url }}">{{ t | strip }}</a>
+                <a class="mx-2" href="{{ t | strip | url_param_escape | prepend: '/browse.html#mechanics:' | relative_url }}">{{ t | strip }}</a>
                 {% endfor %}
             </p>
             {% if page.awards %}
