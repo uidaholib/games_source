@@ -1,6 +1,7 @@
 field,display_name,btn,hidden,sort_name,facet_name
-designer,Designer,
-publisher,Publisher,
+designer,Designer,,,Designer,
+publisher,Publisher,,,Publisher,
 theme,,true,
 mechanics,,true,
-Awards_without_year,,,true,
+Awards_without_year,,,true,,Awards
+date,,,true,Year,Year
