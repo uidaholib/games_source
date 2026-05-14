@@ -1,0 +1,42 @@
+---
+# Default home page with boxes providing collection stats
+layout: page
+---
+{%- assign items = site.data[site.metadata] | where_exp: 'item','item.objectid' -%}
+<div class="row">
+
+  <div class="col-md-8">
+
+    {% include index/description.html %}
+
+    {% include index/carousel.html title="Games Preview" %}
+
+    {% include index/featured-terms.html field="theme" title="Themes" btn-color="clearwater" max=15 %}
+
+    {% include index/featured-terms.html field="mechanics" title="Mechanics" btn-color="outline-palouse" max=15 %}
+
+  </div>
+  <div class="col-md-4"> 
+
+    <div class="card mb-3" >
+      <div class="card-body">
+        <h2 class="card-title">Getting Started</h2>
+        <p class="card-text">
+        {{ content }}
+        </p>
+      </div>
+    </div>
+
+    <div class="card mb-3" >
+      <div class="card-body">
+        <h2 class="card-title h5">Collection</h2>
+        <p class="card-text">
+          {{ items | size }} Games<br>
+          <a class="btn btn-sm btn-outline-secondary mt-2" href="{{ '/data.html' | relative_url }}">View table</a>
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</div>

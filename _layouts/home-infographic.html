@@ -8,34 +8,23 @@ layout: page
   <div class="col-md-8">
 
     {% include index/description.html %}
+    {% include index/carousel.html title="Sample Items" %}
+    
+  </div>
+  <div class="col-md-4">  
 
-    {% include index/carousel.html title="Games Preview" %}
+    {% include index/time.html %}
 
-    {% include index/featured-terms.html field="theme" title="Themes" btn-color="payette-blue" max=15 %}
+    {% include index/featured-terms.html field="subject" title="Top Subjects" btn-color="clearwater" %}
 
-    {% include index/featured-terms.html field="mechanics" title="Mechanics" btn-color="outline-payette-blue" max=15 %}
+    {% include index/featured-terms.html field="location" title="Locations" btn-color="outline-palouse" %}
+    
+    {% include index/content.html %}
 
   </div>
-  <div class="col-md-4"> 
+  <div class="col-md-12">
 
-    <div class="card mb-3" >
-      <div class="card-body">
-        <h2 class="card-title">Getting Started</h2>
-        <p class="card-text">
-        {{ content }}
-        </p>
-      </div>
-    </div>
-
-    <div class="card mb-3" >
-      <div class="card-body">
-        <h2 class="card-title h5">Collection</h2>
-        <p class="card-text">
-          {{ items | size }} Games<br>
-          <a class="btn btn-sm btn-outline-secondary mt-2" href="{{ '/data.html' | relative_url }}">View table</a>
-        </p>
-      </div>
-    </div>
+    {% include index/data-download.html %}
 
   </div>
 
