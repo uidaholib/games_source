@@ -1,16 +1,24 @@
 ---
 title: About
-layout: page-narrow
+layout: about
 permalink: /about.html
 # include CollectionBuilder info at bottom
-#credits: true
+credits: true
+# featured-image value can be one objectid for a photo object in this collection, a relative path to an image in this project, or a full url to any image. If left blank, no featured image will appear at top of About page.
+about-featured-image: https://objects.lib.uidaho.edu/games/board-game.jpg
+# set background-position for featured image, "center", "top", "bottom"
+position: center
+# major heading to display over featured image
+heading: Board Game Collection
+# paragraph text below heading in featured image
+sub-heading: 
+# additional padding added to the feature to increase size. Give value in em or px, e.g. "5em".
+padding: 6em
 # Edit the markdown on in this file to describe your collection
 # Look in _includes/feature for options to easily add features to the page
 ---
 
-{% include feature/jumbotron.html objectid="https://www.lib.uidaho.edu/media/carousel/board-game.jpg" %}
-
-## About the Board Game Collection
+## About the Collection 
 
 This collection was the brainchild of library employees who sought to create a collection of board games for the benefit of the University of Idaho community. Board gaming in general has experienced a rise in popularity in recent decades and they provide an activity that promotes critical thinking and provides support for mental health through stress relief and collaboration. In this collection you will find games that span the range of classic game that you might have played during your childhood to modern board games that are more strategy based.
 
